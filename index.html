@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="container d-flex justify-content-center flex-column align-items-center p-5">
+    <h1 class="p-5 position-relative align-items-center justify-content-center">
+        Bookmarker
+    </h1>
+    <div class="bookmark-body w-100 mt-4">
+        <h2 class="align-items-center mt-3"><span><i class="fa-solid fa-bookmark" style="color: #FFD43B;"></i></span> Bookmark your favorite sites  <span><i class="fa-solid fa-bookmark" style="color: #FFD43B;"></i></span></h2>
+    <div class="siteName w-100 d-flex flex-column my-2 justify-content-center">
+        <div class="form-floating mb-3">
+            <input type="text" oninput="validate(this)" class="form-control" id="BookMarkName" placeholder="Bookmark Name">
+            <div class="alert alert-danger d-none py-1"><small>Bookmark must start with min 3 letters...</small></div>
+            <label for="BookMarkName">Bookmark Name</label>
+            </div>
+
+    </div>
+    <div class="siteName w-100  d-flex flex-column my-2 justify-content-center">
+        <div class="form-floating mb-3">
+            <input type="text" oninput="validate(this)" class="form-control" id="BookMarkUrl" placeholder="Website Url">
+            <div class="alert alert-danger d-none py-1"><small>Bookmark Url must start with www...</small></div>
+            <label for="BookMarkUrl">Site Url</label>
+            </div>
+
+
+
+    </div>
+    <button onclick="submitBookmark()" class="btn btn-danger justify-content-center align-items-center px-5 my-3">Submit</button>
+    </div>
+    <table class="table bg-light text-center mt-4">
+        <thead>
+            <tr>
+                <th class="text-capitalize">Website Name</th>
+                <th class="text-capitalize">Visit</th>
+                <th class="text-capitalize">Delete</th>
+            </tr>
+        </thead>
+        <tbody id="tableContent">
+            
+        </tbody>
+    </table>
+    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js" ></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
